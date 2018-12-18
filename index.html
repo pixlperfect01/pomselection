@@ -1,6 +1,14 @@
 <html>
 <head>
-
+<script>
+var sel=document.getElementById('Amount');
+var custom=document.getElementById('custom');
+if(sel.value="c"){
+custom.hidden="false";
+}else{
+custom.hidden="true";
+}
+</script>
 </head>
 <body>
 <div style="text-align:center;">
@@ -15,7 +23,7 @@ Amount:<select required="true" name="Amount">
 </select>Charger Bucks<br>
 <div id="custom" hidden>
 <input placeholder="How Much" name="Custom Value"><br>
- </div>
+</div>
 <input placeholder="Email" type="email" name="email"><br>
 <input placeholder="ID Number" name="ID#"><br>
 <input placeholder="House/Cluster" name="House" required="true"><br>
