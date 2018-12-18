@@ -1,20 +1,32 @@
 <html>
 <head>
+<style>
+.req{
+color:red;
+}
+
+</style>
 <script>
+var req=document.getElementsByClassName('req');
+for(var i=0;i<req.length;i++){
+req[i].onclick="alert('This feild is required')";
+}
 var sel=document.getElementById('Amount');
 var custom=document.getElementById('custom');
 if(sel.value="c"){
 custom.hidden="false";
+custom.required="true";
 }else{
 custom.hidden="true";
+custom.required="false";
 }
 </script>
 </head>
 <body>
 <div style="text-align:center;">
 <form>
-<input placeholder="Your Name" name="Name" required="true"><br>
-Amount:<select required="true" name="Amount">
+<a class="req">*</a><input placeholder="Your Name" name="Name" required="true"><br>
+<a class="req">*</a>Amount:<select required="true" name="Amount">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
@@ -32,7 +44,7 @@ Amount:<select required="true" name="Amount">
 </div>
 <input placeholder="Email" type="email" name="email"><br>
 <input placeholder="ID Number" name="ID#"><br>
-<input placeholder="House/Cluster" name="House" required="true"><br>
+<a class="req">*</a><input placeholder="House/Cluster" name="House" required="true"><br>
 </form>
 </body>
 </html>
