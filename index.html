@@ -21,7 +21,7 @@ var req=document.getElementsByClassName('req');
 for(var i=0;i<req.length;i++){
 req[i].onclick="alert('This feild is required')";
 }
-var sel=document.getElementById('Amount');
+var sel=document.getElementsByName('Amount')[0];
 var custom=document.getElementById('custom');
 if(sel.value="c"){
 custom.hidden="false";
