@@ -30,6 +30,7 @@ var req=document.getElementsByClassName('req');
 for(var i=0;i<req.length;i++){
 req[i].onclick="alert('This feild is required')";
 }
+function cstm(){
 var sel=document.getElementsByName('Amount')[0];
 var custom=document.getElementById('custom');
 if(sel.value=="c"){
@@ -38,7 +39,7 @@ custom.required="true";
 }else{
 custom.hidden="true";
 custom.required="false";
-}
+}}
 </script>
 </head>
 <body>
@@ -46,7 +47,7 @@ custom.required="false";
   <h2>Donations</h2>
 <form>
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="Your Name" name="Name" required="true"><br>
-<a onclick="alert('This feild is required');" class="req">*</a>Amount:<select required="true" name="Amount">
+<a onclick="alert('This feild is required');" class="req">*</a>Amount:<select onchange="cstm()" required="true" name="Amount">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
