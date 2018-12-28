@@ -33,7 +33,7 @@ margin-botton:10px;
 color:red;
 margin-top:10px;
 margin-botton:10px;
-forn-size:2em;
+forn-size:3.5em;
 }
 
 </style>
@@ -56,7 +56,7 @@ custom.required="false";
 <body>
 <div class="main">
   <h2>Donations</h2>
-<form>
+<form method="POST" action="https://formspree.io/williamsjpoms.6a@gmail.com">
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="Your Name" name="Name" required="true"><br>
 <a onclick="alert('This feild is required');" class="req">*</a>Amount:<select required="true" name="Amount">
 <option value="1">1</option>
@@ -77,6 +77,7 @@ custom.required="false";
 <input placeholder="Email" type="email" name="email"><br>
 <input placeholder="ID Number" name="ID#"><br>
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="House/Cluster" name="House" required="true"><br>
+<input type="submit" value="Donate">
 </form>
 </body>
 </html>
