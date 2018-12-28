@@ -41,7 +41,7 @@ select{
 }
 </style>
 <script>
-var sel=document.getElementById('Am');
+var sel=document.getElementsByTagName("BODY")[0].children[0].children[1].children[4];
 var custom=document.getElementById('custom');
 var req=document.getElementsByClassName('req');
 for(var i=0;i<req.length;i++){
@@ -56,7 +56,7 @@ custom.required="false";
 }
 </script>
 </head>
-<body onload="setup()">
+<body>
 <div class="main">
   <h2>Donations</h2>
 <form method="POST" action="https://formspree.io/williamsjpoms.6a@gmail.com">
