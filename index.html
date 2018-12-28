@@ -16,26 +16,29 @@
     color:rgb(20,255,20);
   }
 input{
-margin-top:10px;
-margin-botton:10px;
+  margin-top:10px;
+  margin-botton:10px;
   border-radius:5px;
   border-type:inset;
   width:250px;
   height:40px;
 }
 select{
-margin-top:10px;
-margin-botton:10px;
+  margin-top:10px;
+  margin-botton:10px;
   border-radius:5px;
   height:30px;
 }
 .req{
-color:red;
-margin-top:10px;
-margin-botton:10px;
-forn-size:3.5em;
+  color:red;
+  margin-top:10px;
+  margin-botton:10px;
+  font-size:2em;
 }
-
+.submit{
+  background-colr:#c0ff00;
+  color:#ff0000;
+}
 </style>
 <script>
 var req=document.getElementsByClassName('req');
@@ -77,7 +80,7 @@ custom.required="false";
 <input placeholder="Email" type="email" name="email"><br>
 <input placeholder="ID Number" name="ID#"><br>
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="House/Cluster" name="House" required="true"><br>
-<input type="submit" value="Donate">
+<input class="submit" type="submit" value="Donate">
 </form>
 </body>
 </html>
