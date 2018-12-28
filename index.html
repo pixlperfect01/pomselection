@@ -17,9 +17,9 @@
   }
 input{
   margin-top:10px;
-  margin-botton:10px;
+  margin-bottom:10px;
   border-radius:5px;
-  border-type:inset;
+  border-style:inset;
   width:250px;
   height:40px;
 }
@@ -41,12 +41,15 @@ select{
 }
 </style>
 <script>
+var sel,custom;
+function setup(){
+sel=document.getElementsByName('Amount')[0];
+custom=document.getElementById('custom');
+}
 var req=document.getElementsByClassName('req');
 for(var i=0;i<req.length;i++){
 req[i].onclick="alert('This feild is required')";
 }
-var sel=document.getElementsByName('Amount')[0];
-var custom=document.getElementById('custom');
 if(sel.value=="c"){
 custom.hidden="false";
 custom.required="true";
@@ -56,7 +59,7 @@ custom.required="false";
 }
 </script>
 </head>
-<body>
+<body onload="setup()">
 <div class="main">
   <h2>Donations</h2>
 <form method="POST" action="https://formspree.io/williamsjpoms.6a@gmail.com">
