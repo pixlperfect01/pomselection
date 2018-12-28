@@ -43,7 +43,7 @@ select{
 <script>
 var sel,custom;
 function setup(){
-sel=document.getElementsByName('Amount')[0];
+sel=document.getElementById('Am');
 custom=document.getElementById('custom');
 }
 var req=document.getElementsByClassName('req');
@@ -64,7 +64,7 @@ custom.required="false";
   <h2>Donations</h2>
 <form method="POST" action="https://formspree.io/williamsjpoms.6a@gmail.com">
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="Your Name" name="Name" required="true"><br>
-<a onclick="alert('This feild is required');" class="req">*</a>Amount:<select required="true" name="Amount">
+<a onclick="alert('This feild is required');" class="req">*</a>Amount:<select required="true" id="Am" name="Amount">
 <option value="1">1</option>
 <option value="2">2</option>
 <option value="3">3</option>
