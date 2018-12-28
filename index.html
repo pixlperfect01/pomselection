@@ -41,11 +41,8 @@ select{
 }
 </style>
 <script>
-var sel,custom;
-function setup(){
-sel=document.getElementById('Am');
-custom=document.getElementById('custom');
-}
+var sel=document.getElementById('Am');
+var custom=document.getElementById('custom');
 var req=document.getElementsByClassName('req');
 for(var i=0;i<req.length;i++){
 req[i].onclick="alert('This feild is required')";
