@@ -71,6 +71,7 @@ custom.required=false;
         document.getElementsByTagName('FORM')[0].submit();
       }else{
         alert('Please submit a valid amount');
+        document.getElementById('msg').hidden=false;
       }
     }else{
       document.getElementsByTagName('FORM')[0].submit();
@@ -102,7 +103,8 @@ custom.required=false;
 <input placeholder="Email" type="email" name="email"><br>
 <input placeholder="ID Number" name="ID#"><br>
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="House/Cluster" name="House" required="true"><br>
-<button class="submit" onclick="check()">Donate</button>
+<button class="submit" onclick="check()">Donate</button><br>
+<a style="color:red;font-size:1.6em;" id="msg" hidden>Please submit a valid amount for your donation</a>
 </form>
 </body>
 </html>
