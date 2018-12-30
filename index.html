@@ -98,13 +98,12 @@ custom.required=false;
 <option value="c">Custom</option>
 </select>Charger Bucks<br>
 <div id="custom" hidden>
-<input placeholder="How Much" name="Custom Value"><br>
+<input placeholder="How Much(Decimals are rounded down)" name="Custom Value"><br>
 </div>
 <input placeholder="Email" type="email" name="email"><br>
 <input placeholder="ID Number" name="ID#"><br>
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="House/Cluster" name="House" required="true"><br>
-<button class="submit" onclick="check()">Donate</button><br>
-<a style="color:red;font-size:1.5em;" id="msg" hidden>Please submit a valid amount for your donation</a>
+<input type="submit" class="submit" value="Donate"><br>
 </form>
 </body>
 </html>
