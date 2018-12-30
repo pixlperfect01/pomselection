@@ -60,7 +60,7 @@ custom.required=false;
     var c=document.getElementById('custom');
     var sel=document.getElementbyId('Am');
     if(sel.value=="c"){
-      if(parseInt(c.value)==Math.trunc(parseInt(c.value)))){
+      if(parseInt(c.value)==Math.trunc(parseInt(c.value))){
         document.getElementsByTagName('FORM')[0].submit();
       }else{
         alert('Please submit a valid amount');
