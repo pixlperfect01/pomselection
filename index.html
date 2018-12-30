@@ -22,7 +22,7 @@ input{
   width:250px;
   height:40px;
 }
-div{
+button{
   margin-top:10px;
   margin-bottom:10px;
   border-radius:5px;
@@ -103,7 +103,7 @@ custom.required=false;
 <input placeholder="Email" type="email" name="email"><br>
 <input placeholder="ID Number" name="ID#"><br>
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="House/Cluster" name="House" required="true"><br>
-<center><div class="submit" onclick="check()">Donate</div></center><br>
+<button class="submit" onclick="check()">Donate</button><br>
 <a style="color:red;font-size:1.5em;" id="msg" hidden>Please submit a valid amount for your donation</a>
 </form>
 </body>
