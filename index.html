@@ -41,6 +41,7 @@ select{
 }
 </style>
 <script>
+function run(){
 var sel=document.getElementsByTagName("BODY")[0].children[0].children[1].children[4];
 var custom=document.getElementById('custom');
 var req=document.getElementsByClassName('req');
@@ -54,9 +55,10 @@ custom.required="true";
 custom.hidden="true";
 custom.required="false";
 }
+}
 </script>
 </head>
-<body>
+<body onload="setTimeout(function(){setInterval(run,500)},750)">
 <div class="main">
   <h2>Donations</h2>
 <form method="POST" action="https://formspree.io/williamsjpoms.6a@gmail.com">
