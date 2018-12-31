@@ -1,1 +1,22 @@
 <script>
+  var b=new Bar();
+  function Bar(){
+    this.filled=0;
+    this.goal=100;
+    this.draw=function(){
+      ctxx.fillStyle="#000000";
+      ctxx.fillRect(20,20,280,40);
+      ctxx.fillStyle="#8888ff";
+      ctxx.fillRect(20,20,eval(280+"*."+this.filled),40);
+    }
+    this.anim=function(){}
+  }
+  var cc,ctxx;
+  function go(){
+    cc=document.getElementById("myCanvas1");
+    ctxx=cc.getContext("2d");
+    ctxx.fillStyle="#0000ff";
+    ctx.fillRect(0,0,cc.width,cc.height);
+  }
+</script>
+<canvas id="myCanvas1">
