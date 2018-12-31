@@ -78,8 +78,111 @@ custom.required=false;
     }
   }
 </script>
+<script>
+var c,ctx,l;
+function s(){
+c=document.getElementById('myCanvas');
+ctx=c.getContext('2d');
+l=new logo();
+main();
+}
+function logo(){
+  this.tm=0;
+  this.draw=function(){
+    for(var i=0;i<75;i++){
+      if(this.tm===i){
+        ctx.fillStyle="#0000FF";
+        ctx.fillRect(20,20,40,300);
+        ctx.fillRect(20,20,150,40);
+        ctx.fillRect(20,150,150,40);
+        ctx.fillRect(20,280,150,40);
+        ctx.fillRect(220,20,40,300);
+        ctx.fillRect(220,20,120,40);
+        ctx.fillRect(340,60,40,80);
+        ctx.fillRect(220,140,120,40);
+        ctx.fillRect(260,180,40,50);
+        ctx.fillRect(300,230,40,50);
+        ctx.fillRect(340,280,40,40);
+        ctx.fillRect(430,20,160,40);
+        ctx.fillRect(490,20,40,300);
+        ctx.fillRect(430,280,160,40);
+        ctx.fillRect(680,20,120,40);
+        ctx.fillRect(640,60,40,220);
+        ctx.fillRect(680,280,120,40);
+      }
+      if(this.tm===i+75){
+        ctx.fillStyle="#FF0000";
+        ctx.fillRect(90,20,40,300);
+        ctx.fillRect(90,20,160,40);
+        ctx.fillRect(90,120,120,40);
+        ctx.fillRect(340,20,130,40);
+        ctx.fillRect(300,60,40,220);
+        ctx.fillRect(340,280,130,40);
+        ctx.fillRect(470,60,40,220);
+        ctx.fillRect(580,20,40,300);
+        ctx.fillRect(580,20,120,40);
+        ctx.fillRect(700,60,40,80);
+        ctx.fillRect(580,140,120,40);
+        ctx.fillRect(620,180,40,50);
+        ctx.fillRect(660,230,40,50);
+        ctx.fillRect(700,280,40,40);
+      }
+      if(this.tm===i+150){
+        ctx.fillStyle="#00FF00";
+        ctx.fillRect(20,20,40,300);
+        ctx.fillRect(20,20,120,40);
+        ctx.fillRect(140,60,40,60);
+        ctx.fillRect(20,120,120,40);
+        ctx.fillRect(220,20,40,300);
+        ctx.fillRect(220,20,120,40);
+        ctx.fillRect(340,60,40,80);
+        ctx.fillRect(220,140,120,40);
+        ctx.fillRect(260,180,40,50);
+        ctx.fillRect(300,230,40,50);
+        ctx.fillRect(340,280,40,40);
+        ctx.fillRect(420,20,40,300);
+        ctx.fillRect(420,20,150,40);
+        ctx.fillRect(420,150,150,40);
+        ctx.fillRect(420,280,150,40);
+        ctx.fillRect(608,20,202,40);
+        ctx.fillRect(608,280,202,40);
+        ctx.fillRect(770,60,40,43);
+        ctx.fillRect(729,104,40,43);
+        ctx.fillRect(688,148,40,43);
+        ctx.fillRect(648,192,40,43);
+        ctx.fillRect(608,236,40,44);
+
+      }
+    }
+    this.tm++;
+    if(this.tm>=225){
+      this.tm=0;
+    }
+  }
+  this.lights=function(){
+    var cols=["ff0000","00ff00","0000ff"];
+    for(var ii=0;ii<c.height;ii+=2){
+      for(var i=0;i<c.width;i+=2){
+        if(Math.random()<.001){
+          ctx.fillStyle="#"+cols[Math.trunc(Math.random()*cols.length)];
+          ctx.fillRect(i,ii,2,2);
+        }
+      }
+    }
+  }
+}
+var t=0;
+var tt=0;
+function main(){
+ctx.fillStyle="#000000";
+ctx.fillRect(0,0,c.width,c.height);
+l.lights();
+l.draw();
+window.requestAnimationFrame(main);
+}
+</script>
 </head>
-<body onload="setTimeout(function(){setInterval(run,10)},500)">
+<body onload="setTimeout(function(){setInterval(run,10);s();},500)">
 <div class="main">
   <h2>Donations</h2>
 <form method="POST" action="https://formspree.io/williamsjpoms.6a@gmail.com">
@@ -106,5 +209,9 @@ custom.required=false;
 <a onclick="alert('This feild is required');" class="req">*</a><input placeholder="House/Cluster" name="House" required="true"><br>
 <input type="submit" class="submit" value="Donate"><br>
 </form>
+</div>
+<center>
+<canvas width="850" height="350" id="myCanvas">
+</center>
 </body>
 </html>
