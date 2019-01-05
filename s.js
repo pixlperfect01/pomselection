@@ -3,7 +3,7 @@ var spots;
 var img;
 
 function preload() {
-  img = loadImage("assets/2017.png");
+  img = loadImage("arakelian.jpg");
 }
 
 function setup() {
