@@ -11,14 +11,12 @@ function Circle(x, y) {
   }
 
   this.show = function() {
-    ctx.strokeStyle="blue";
-    ctx.lineWidth=2;
-    ctx.beginPath();
-    arc(this.x, this.y, this.r * 2, 0, 2 * Math.PI);
-    ctx.stroke();
+    stroke("blue");
+    strokeWidth(2);
+    ellipse(this.x, this.y, this.r * 2);
   }
 
   this.edges = function() {
-    return (this.x + this.r >= c.width || this.x - this.r <= 0 || this.y + this.r >= c.height || this.y - this.r <= 0||(this.r*2)>10)
+    return (this.x + this.r >= width || this.x - this.r <= 0 || this.y + this.r >= height || this.y - this.r <= 0|| (this.r * 2 ) > 10)
   }
 }
