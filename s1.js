@@ -6,7 +6,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(600, 300);
+  createCanvas(713, 300);
   background(51);
   // textFont(font);
   // textSize(192);
@@ -14,7 +14,7 @@ function setup() {
   // noStroke();
   // text('train', 100, 200);
 
-  var points = font.textToPoints('Erick', 25, 250, 250, {
+  var points = font.textToPoints('Erick', 25, 305, 250, {
     sampleFactor: 0.25
   });
 
