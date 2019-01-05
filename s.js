@@ -8,6 +8,7 @@ function preload() {
 
 function setup() {
   createCanvas(713, 153);
+  console.log("hi")
   var density = displayDensity();
   pixelDensity(1);
   img.loadPixels();
