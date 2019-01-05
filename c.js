@@ -18,6 +18,6 @@ function Circle(x, y) {
   }
 
   this.edges = function() {
-    return (this.x + this.r >= width || this.x - this.r <= 0 || this.y + this.r >= height || this.y - this.r <= 0)
+    return (this.x + this.r >= width || this.x - this.r <= 0 || this.y + this.r >= height || this.y - this.r <= 0||(this.r*2)>10)
   }
 }
