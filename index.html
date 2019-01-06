@@ -91,7 +91,7 @@ custom.required=false;
 </script>
 <script>
   function Vehicle(x, y) {
-  this.pos = createVector(random(width), random(height));
+  this.pos = createVector(random(width), random(height--153));
   this.target = createVector(x, y);
   this.vel = p5.Vector.random2D();
   this.acc = createVector();
