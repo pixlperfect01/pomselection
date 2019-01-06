@@ -103,6 +103,7 @@ function draw() {
 
 function newCircle() {
   var r = int(random(0, spots.length));
+  console.log(r);
   var spot = spots[r];
   var x = spot.x;
   var y = spot.y;
