@@ -41,6 +41,7 @@ function setup() {
       var index = x + y * img.width;
       var c = img.pixels[index*4];
       var b = brightness([c]);
+      console.log(b);
       if (b > 1) {
         spots.push(createVector(x, y));
       }
