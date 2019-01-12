@@ -162,7 +162,7 @@ Vehicle.prototype.flee = function(target) {
   
 </script>
 </head>
-<body onload="setTimeout(function(){setInterval(run,10);var q=document.getElementById(&quot;cn&quot;);q.appendChild(document.getElementById(&quot;defaultCanvas0&quot;))},500)">
+<body onload="setTimeout(function(){setInterval(run,10);setInterval(function(){var q=document.getElementById(&quot;cn&quot;);q.appendChild(document.getElementById(&quot;defaultCanvas0&quot;));},20},500)">
 <div class="main">
   <h2>Donations</h2>
 <form method="POST" action="https://formspree.io/williamsjpoms.6a@gmail.com">
