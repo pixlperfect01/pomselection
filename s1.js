@@ -89,28 +89,13 @@ function mousePressed(){
 
 function draw() {
   background(51);
-   if(mode===0){
-    for (var i = 0; i < vehicles.length; i++) {
-      var v = vehicles[i];
-      v.behaviors();
-      v.update();
-      v.show();
-    }
-  }else{
-     draw2();
+  for (var i = 0; i < vehicles.length; i++) {
+    var v = vehicles[i];
+    v.behaviors();
+    v.update();
+    v.show();
   }
 }
 
-function draw2(){
-  if(mode<messages.length){
-    for(var i=0;i<messages[mode].length;i++){
-      messages[mode][i].behaviors();
-      messages[mode][i].update();
-      messages[mode][i].show();
-    }
-  }
-  timer++;
-  if(timer % 200 === 0)
-    mode++;
-}
+
       
